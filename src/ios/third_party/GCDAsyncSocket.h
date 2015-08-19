@@ -14,27 +14,11 @@
 #import <dispatch/dispatch.h>
 #import <Availability.h>
 
-#if TARGET_OS_IPHONE
-#import <CFNetwork/CFNetwork.h>
-#endif
+#include <sys/socket.h> // AF_INET, AF_INET6
 
-#import <TargetConditionals.h>
-#import <arpa/inet.h>
-#import <fcntl.h>
-#import <ifaddrs.h>
-#import <netdb.h>
-#import <netinet/in.h>
-#import <net/if.h>
-#import <sys/socket.h>
-#import <sys/types.h>
-#import <sys/ioctl.h>
-#import <sys/poll.h>
-#import <sys/uio.h>
-#import <unistd.h>
-
-#import "DDLog.h"
-
-//#include <sys/socket.h> // AF_INET, AF_INET6
+@class GCDAsyncReadPacket;
+@class GCDAsyncWritePacket;
+@class GCDAsyncSocketPreBuffer;
 
 extern NSString *const GCDAsyncSocketException;
 extern NSString *const GCDAsyncSocketErrorDomain;
