@@ -16,10 +16,6 @@
 
 #include <sys/socket.h> // AF_INET, AF_INET6
 
-@class GCDAsyncReadPacket;
-@class GCDAsyncWritePacket;
-@class GCDAsyncSocketPreBuffer;
-
 extern NSString *const GCDAsyncSocketException;
 extern NSString *const GCDAsyncSocketErrorDomain;
 
