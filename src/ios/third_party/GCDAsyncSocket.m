@@ -10,23 +10,6 @@
 
 #import "GCDAsyncSocket.h"
 
-#if TARGET_OS_IPHONE
-#import <CFNetwork/CFNetwork.h>
-#endif
-
-#import <TargetConditionals.h>
-#import <arpa/inet.h>
-#import <fcntl.h>
-#import <ifaddrs.h>
-#import <netdb.h>
-#import <netinet/in.h>
-#import <net/if.h>
-#import <sys/types.h>
-#import <sys/ioctl.h>
-#import <sys/poll.h>
-#import <sys/uio.h>
-#import <unistd.h>
-
 #if ! __has_feature(objc_arc)
 #warning This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
 // For more information see: https://github.com/robbiehanson/CocoaAsyncSocket/wiki/ARC
@@ -45,7 +28,6 @@
 // https://github.com/robbiehanson/CocoaLumberjack
 // 
 // It allows us to do a lot of logging without significantly slowing down the code.
-#import "DDLog.h"
 
 #define LogAsync   YES
 #define LogContext GCDAsyncSocketLoggingContext
