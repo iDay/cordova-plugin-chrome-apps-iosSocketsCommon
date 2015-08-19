@@ -21,7 +21,6 @@
 #import <netdb.h>
 #import <netinet/in.h>
 #import <net/if.h>
-#import <sys/socket.h>
 #import <sys/types.h>
 #import <sys/ioctl.h>
 #import <sys/poll.h>
