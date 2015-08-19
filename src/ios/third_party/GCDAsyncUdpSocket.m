@@ -15,20 +15,6 @@
 // For more information see: https://github.com/robbiehanson/CocoaAsyncSocket/wiki/ARC
 #endif
 
-#if TARGET_OS_IPHONE
-  #import <CFNetwork/CFNetwork.h>
-  #import <UIKit/UIKit.h>
-#endif
-
-#import <arpa/inet.h>
-#import <fcntl.h>
-#import <ifaddrs.h>
-#import <netdb.h>
-#import <net/if.h>
-#import <sys/socket.h>
-#import <sys/types.h>
-
-
 #if 0
 
 // Logging Enabled - See log level below
@@ -37,7 +23,6 @@
 // http://code.google.com/p/cocoalumberjack/
 // 
 // It allows us to do a lot of logging without significantly slowing down the code.
-#import "DDLog.h"
 
 #define LogAsync   NO
 #define LogContext 65535

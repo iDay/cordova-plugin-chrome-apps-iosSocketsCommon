@@ -13,6 +13,20 @@
 #import <TargetConditionals.h>
 #import <Availability.h>
 
+#if TARGET_OS_IPHONE
+  #import <CFNetwork/CFNetwork.h>
+  #import <UIKit/UIKit.h>
+#endif
+
+#import <arpa/inet.h>
+#import <fcntl.h>
+#import <ifaddrs.h>
+#import <netdb.h>
+#import <net/if.h>
+#import <sys/socket.h>
+#import <sys/types.h>
+#import "DDLog.h"
+
 extern NSString *const GCDAsyncUdpSocketException;
 extern NSString *const GCDAsyncUdpSocketErrorDomain;
 
